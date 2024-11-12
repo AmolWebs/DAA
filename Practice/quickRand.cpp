@@ -42,8 +42,8 @@ void randomizedQuickSort(int* arr, int p, int r) {
 int main() {
     cout<<"Name : Amol Subhash Dangat\nRoll No : 09\n"<<endl;
     int A[] = {23, 34, 54, 123, 34, 56, 67676, 112};
-    int rnd = rand() % 8;
-    cout<<"It is random : "<<rnd<<endl;
+    int randomIndex = rand() % sizeof(A);
+    swap(A[randomIndex], A[sizeof(A) - 1]);
     int n = sizeof(A) / sizeof(A[0]);
     randomizedQuickSort(A, 0, n - 1);
     cout<<"Sorted array is: ";
